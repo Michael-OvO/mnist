@@ -10,6 +10,7 @@ from torch.utils.tensorboard import SummaryWriter
 import time
 import matplotlib.pyplot as plt
 from torchvision import transforms
+import random
 
 
 #Basic Params-----------------------------
@@ -146,7 +147,9 @@ print(model)
 
 fig = plt.figure(figsize=(20,20))
 for i in range(20):
-    data = test_loader.dataset[i]
+    #random number
+    index = random.randint(0,test_data_size)
+    data = test_loader.dataset[index]
     if gpu:
         img = data[0].cuda()
     else:
