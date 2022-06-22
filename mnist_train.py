@@ -1,16 +1,13 @@
-from functools import total_ordering
-from numpy import argmax
 import torch
 import torchvision
 from torch.utils.data import DataLoader
 import torch.nn as nn
-import torch.nn.functional as F
 import torch.optim as optim
 from torch.utils.tensorboard import SummaryWriter
 import time
 import matplotlib.pyplot as plt
-from torchvision import transforms
 import random
+from numpy import argmax
 
 
 #Basic Params-----------------------------
